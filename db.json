@@ -1,0 +1,47 @@
+{
+  "logs": [
+    {
+      "id": 1,
+      "message": "Changed hard drive on workstation 005",
+      "attention": false,
+      "date": "03-02-2021",
+      "tech": "Sam Smith"
+    },
+    {
+      "id": 2,
+      "message": "Faulty memory on workstation 003.",
+      "attention": true,
+      "date": "05-15-2021",
+      "tech": "Sam Smith"
+    },
+    {
+      "id": 3,
+      "message": "Computer literally on fire.",
+      "attention": true,
+      "date": "05-16-2021",
+      "tech": "Sam Smith"
+    }
+  ],
+  "techs": [
+    {
+      "id": 1,
+      "firstName": "Goku",
+      "lastName": "Z-Fighter"
+    },
+    {
+      "id": 2,
+      "firstName": "Gohan",
+      "lastName": "Z-Fighter"
+    },
+    {
+      "id": 3,
+      "firstName": "Tien",
+      "lastName": "Z-Fighter"
+    },
+    {
+      "id": 4,
+      "firstName": "Vageta",
+      "lastName": "Z-Fighter"
+    }
+  ]
+}
