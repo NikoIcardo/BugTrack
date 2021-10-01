@@ -25,8 +25,11 @@ const Logs = () => {
   }
 
   return (
-    <ul className="collection with-header">
-      <li className="collection-header grey darken-2 white-text">
+    <ul
+      className="collection with-header round"
+      style={{ borderRadius: '30px' }}
+    >
+      <li className="collection-header yellow darken-2 white-text">
         <h4 className="center">System Logs</h4>
       </li>
       {!loading && logs.length === 0 ? (
