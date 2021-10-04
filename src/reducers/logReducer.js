@@ -7,6 +7,7 @@ import {
   CLEAR_CURRENT,
   SET_CURRENT,
   UPDATE_LOG,
+  SEARCH_LOGS,
 } from '../actions/types';
 
 const initialState = {
@@ -24,6 +25,11 @@ export default (state = initialState, action) => {
         ...state,
         logs: action.payload,
         loading: false,
+      };
+    case SEARCH_LOGS:
+      return {
+        ...state,
+        logs: action.payload,
       };
     case ADD_LOG:
       return {
