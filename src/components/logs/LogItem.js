@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const LogItem = ({ log }) => {
   return (
-    <li className="collection-item hoverable pink lighten-5">
+    <li className="collection-item hoverable ">
       <div>
         <a
           href="#edit-log-modal"
