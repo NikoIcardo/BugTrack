@@ -6,13 +6,6 @@
       "tech": "John Doe",
       "date": "2021-10-04T16:10:36.133Z",
       "id": 1
-    },
-    {
-      "message": "Auto-Doughnut-Retrieving Bot Repaired. ",
-      "attention": true,
-      "tech": "Gabbagool",
-      "date": "2021-10-04T16:11:48.575Z",
-      "id": 2
     }
   ],
   "techs": [

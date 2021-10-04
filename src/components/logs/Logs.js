@@ -9,7 +9,7 @@ const Logs = ({ log: { logs, loading }, getLogs }) => {
   useEffect(() => {
     getLogs();
     //eslint-disable-next-line
-  }, []);
+  }, [getLogs]);
 
   if (loading || logs === null) {
     return <Preloader />;
@@ -30,7 +30,7 @@ const Logs = ({ log: { logs, loading }, getLogs }) => {
 };
 
 Logs.propTypes = {
-  logs: PropTypes.array.isRequired,
+  log: PropTypes.object.isRequired,
   getLogs: PropTypes.func.isRequired,
 };
 

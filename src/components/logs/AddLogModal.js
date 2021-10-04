@@ -19,7 +19,6 @@ const AddLogModal = ({ addLog }) => {
         tech,
         date: new Date(),
       };
-
       addLog(newLog);
 
       M.toast({ html: `Log added by ${tech}.` });
