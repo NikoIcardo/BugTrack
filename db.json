@@ -1,11 +1,25 @@
 {
   "logs": [
     {
-      "message": "EMP Fired Off in Server Bay 10. All Network Drives Sustained Permanent Damage. ",
+      "id": 1,
+      "message": "EMP Fired Off in Server Bay 10. All Network Drives Sustained Permanent Damage! ",
       "attention": true,
-      "tech": "John Doe",
-      "date": "2021-10-04T16:10:36.133Z",
-      "id": 1
+      "tech": "Seymore",
+      "date": "2021-10-04T19:07:05.430Z"
+    },
+    {
+      "message": "Auto-Doughnut-Producer Back Online",
+      "attention": false,
+      "tech": "Seymore",
+      "date": "2021-10-04T18:45:29.720Z",
+      "id": 2
+    },
+    {
+      "message": "Auto-Doughnut-Producer Adds Gratuitous Amount of Frosting And Sprinkles: needs empathy check to ensure it doesn't over-empathize with doughnut requester.",
+      "attention": true,
+      "tech": "Gabbagool",
+      "date": "2021-10-04T18:46:28.989Z",
+      "id": 3
     }
   ],
   "techs": [
