@@ -1,25 +1,18 @@
 {
   "logs": [
     {
-      "id": 1,
-      "message": "Changed hard drive on workstation 005",
-      "attention": false,
-      "date": "03-02-2021",
-      "tech": "Sam Smith"
+      "message": "EMP Fired Off in Server Bay 10. All Network Drives Sustained Permanent Damage. ",
+      "attention": true,
+      "tech": "John Doe",
+      "date": "2021-10-04T16:10:36.133Z",
+      "id": 1
     },
     {
-      "id": 2,
-      "message": "Faulty memory on workstation 003.",
+      "message": "Auto-Doughnut-Retrieving Bot Repaired. ",
       "attention": true,
-      "date": "05-15-2021",
-      "tech": "Sam Smith"
-    },
-    {
-      "id": 3,
-      "message": "Computer literally on fire.",
-      "attention": true,
-      "date": "05-16-2021",
-      "tech": "Sam Smith"
+      "tech": "Gabbagool",
+      "date": "2021-10-04T16:11:48.575Z",
+      "id": 2
     }
   ],
   "techs": [

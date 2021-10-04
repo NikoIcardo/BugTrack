@@ -16,10 +16,7 @@ const Logs = ({ log: { logs, loading }, getLogs }) => {
   }
 
   return (
-    <ul
-      className="collection with-header round"
-      style={{ borderRadius: '30px' }}
-    >
+    <ul className="collection with-header" style={{ borderRadius: '10px' }}>
       <li className="collection-header grey darken-3 white-text">
         <h4 className="center">System Logs</h4>
       </li>
@@ -34,7 +31,7 @@ const Logs = ({ log: { logs, loading }, getLogs }) => {
 
 Logs.propTypes = {
   logs: PropTypes.array.isRequired,
-  loading: PropTypes.bool.isRequired,
+  getLogs: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
