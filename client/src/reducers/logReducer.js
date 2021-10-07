@@ -29,7 +29,13 @@ export default (state = initialState, action) => {
     case SEARCH_LOGS:
       return {
         ...state,
-        logs: action.payload,
+        logs:
+          action.payload !== ''
+            ? state.logs.filter((log) => {
+                const regex = new RegExp(`${action.payload}`, 'gi');
+                return log.message.match(regex) || log.tech.match(regex);
+              })
+            : state.logs,
       };
     case ADD_LOG:
       return {
@@ -39,14 +45,14 @@ export default (state = initialState, action) => {
     case DELETE_LOG:
       return {
         ...state,
-        logs: state.logs.filter((log) => log.id !== action.payload),
+        logs: state.logs.filter((log) => log._id !== action.payload),
         loading: false,
       };
     case UPDATE_LOG:
       return {
         ...state,
         logs: state.logs.map((log) =>
-          log.id === action.payload.id ? action.payload : log
+          log._id === action.payload._id ? action.payload : log
         ),
         loading: false,
       };

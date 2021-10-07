@@ -6,14 +6,14 @@ import M from 'materialize-css/dist/js/materialize.min.js';
 
 const TechItem = ({ tech, deleteTech }) => {
   const onDelete = () => {
-    deleteTech(tech.id);
+    deleteTech(tech._id);
     M.toast({ html: 'Technician Deleted!' });
   };
 
   return (
     <li className="collection-item">
       <div>
-        <span className="black-text">ID #{tech.id} </span>
+        <span className="black-text">ID #{tech._id} </span>
         <span className="blue-text">
           {tech.firstName} {tech.lastName}
         </span>

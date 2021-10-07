@@ -44,7 +44,7 @@ router.post(
 
       await log.save();
 
-      res.status(201).json({ message: 'Log Added.' });
+      res.status(201).json(log);
     } catch (err) {
       console.log(err.message);
       res.status(500).send('server error');
@@ -61,8 +61,8 @@ router.put('/:id', async (req, res) => {
 
   const logFields = {};
   if (message) logFields.message = message;
-  if (attention) logFields.message = attention;
-  if (tech) logFields.message = tech;
+  if (attention) logFields.attention = attention;
+  if (tech) logFields.tech = tech;
 
   try {
     let log = await Log.findById(req.params.id);

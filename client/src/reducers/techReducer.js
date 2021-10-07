@@ -30,7 +30,7 @@ export default (state = initialState, action) => {
     case DELETE_TECH:
       return {
         ...state,
-        techs: state.techs.filter((t) => t.id !== action.payload),
+        techs: state.techs.filter((t) => t._id !== action.payload),
         loading: false,
       };
     case SET_LOADING:
