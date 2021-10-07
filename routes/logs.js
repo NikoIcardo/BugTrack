@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
 });
 
 // @route   POST api/logs
-// @desc    get logs
+// @desc    Post a new log
 // @access  Public
 
 router.post(
@@ -53,7 +53,7 @@ router.post(
 );
 
 // @route   PUT api/logs
-// @desc    get logs
+// @desc    Update a log
 // @access  Public
 
 router.put('/:id', async (req, res) => {
@@ -84,7 +84,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// @route   Delete api/logs
+// @route   DELETE api/logs
 // @desc    get logs
 // @access  Public
 
