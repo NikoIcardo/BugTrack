@@ -84,6 +84,21 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+// @route   Delete api/logs
+// @desc    get logs
+// @access  Public
 
+router.delete('/:id', async (req, res) => {
+  try {
+    let log = await Log.findById(req.params.id);
+
+    log.remove();
+
+    res.json({ msg: 'Removed Log.' });
+  } catch (err) {
+    console.log(err.message);
+    res.status(500).send('server error');
+  }
+});
 
 module.exports = router;
