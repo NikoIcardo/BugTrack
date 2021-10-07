@@ -39,6 +39,7 @@ export default (state = initialState, action) => {
         loading: true,
       };
     case TECH_ERROR:
+      console.log(action.payload);
       return {
         ...state,
         error: action.payload,
