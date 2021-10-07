@@ -4,7 +4,7 @@ const { check, validationResult } = require('express-validator');
 
 const Log = require('../models/Log');
 
-// @route   get api/logs
+// @route   GET api/logs
 // @desc    get logs
 // @access  Public
 
@@ -13,11 +13,12 @@ router.get('/', async (req, res) => {
     const logs = await Log.find({}).sort({ date: -1 });
     res.json(logs);
   } catch (err) {
+    console.log(err.message);
     res.status(500).send('Server Error');
   }
 });
 
-// @route   post api/logs
+// @route   POST api/logs
 // @desc    get logs
 // @access  Public
 
@@ -44,10 +45,45 @@ router.post(
       await log.save();
 
       res.status(201).json({ message: 'Log Added.' });
-    } catch (error) {
+    } catch (err) {
+      console.log(err.message);
       res.status(500).send('server error');
     }
   }
 );
+
+// @route   PUT api/logs
+// @desc    get logs
+// @access  Public
+
+router.put('/:id', async (req, res) => {
+  const { message, attention, tech } = req.body;
+
+  const logFields = {};
+  if (message) logFields.message = message;
+  if (attention) logFields.message = attention;
+  if (tech) logFields.message = tech;
+
+  try {
+    let log = await Log.findById(req.params.id);
+
+    if (!log) return res.status(404).json({ msg: 'Log not found.' });
+
+    log = await Log.findByIdAndUpdate(
+      req.params.id,
+      {
+        $set: logFields,
+      },
+      { new: true }
+    );
+
+    res.status(200).json(log);
+  } catch (err) {
+    console.log(err.message);
+    res.status(500).send('server error');
+  }
+});
+
+
 
 module.exports = router;
