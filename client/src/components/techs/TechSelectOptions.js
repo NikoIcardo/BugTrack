@@ -10,6 +10,7 @@ const TechSelectOptions = ({ techs, loading, getTechs }) => {
   }, []);
   return (
     techs !== null &&
+    !loading &&
     techs.map((tech) => (
       <option key={tech._id} value={tech.firstName + ' ' + tech.lastName}>
         {tech.firstName + ' ' + tech.lastName}
