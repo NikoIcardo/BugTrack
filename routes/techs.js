@@ -44,7 +44,7 @@ router.post(
 
       await tech.save();
 
-      res.status(200).json({ msg: 'Tech Added.' });
+      res.status(200).json(tech);
     } catch (err) {
       console.log(err.message);
       res.status(500).send('Server Error');
