@@ -19,7 +19,7 @@ const SearchBar = ({ searchLogs }) => {
               id="search"
               ref={text}
               type="search"
-              placeholder="Search Logs..."
+              placeholder="Search Bugs..."
               onChange={onChange}
             />
             <label className="label-icon" htmlFor="search">

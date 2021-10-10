@@ -9,8 +9,8 @@ const TechSelectOptions = ({ techs, loading, getTechs }) => {
     //eslint-disable-next-line
   }, []);
   return (
-    techs !== null &&
     !loading &&
+    techs.length !== 0 &&
     techs.map((tech) => (
       <option key={tech._id} value={tech.firstName + ' ' + tech.lastName}>
         {tech.firstName + ' ' + tech.lastName}
