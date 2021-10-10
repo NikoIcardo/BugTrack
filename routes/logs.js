@@ -61,7 +61,7 @@ router.put('/:id', async (req, res) => {
 
   const logFields = {};
   if (message) logFields.message = message;
-  if (attention) logFields.attention = attention;
+  if (attention !== null) logFields.attention = attention;
   if (tech) logFields.tech = tech;
 
   try {

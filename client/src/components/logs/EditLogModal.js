@@ -33,6 +33,8 @@ const EditLogModal = ({ current, clearCurrent, updateLog }) => {
       tech,
       date: new Date(),
     };
+
+    
     updateLog(updatedLog);
     M.toast({ html: `Log updated by ${tech}.` });
     clearCurrent();
