@@ -34,7 +34,6 @@ const EditLogModal = ({ current, clearCurrent, updateLog }) => {
       date: new Date(),
     };
 
-    
     updateLog(updatedLog);
     M.toast({ html: `Log updated by ${tech}.` });
     clearCurrent();
@@ -43,7 +42,7 @@ const EditLogModal = ({ current, clearCurrent, updateLog }) => {
   return (
     <div id="edit-log-modal" className="modal" style={modalStyle}>
       <div className="modal-content">
-        <h4>Enter System Log</h4>
+        <h4>Edit Bug Log</h4>
         <div className="row">
           <div className="input-field">
             <input
